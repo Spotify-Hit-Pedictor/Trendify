@@ -26,7 +26,7 @@ const Navbar = () => {
             <Item to="/about" name="About" />
           </li>
           <li>
-            <Item to="/contact" name="Contact" />
+            <Item to="/help" name="Help" />
           </li>
         </ul>
       </div>

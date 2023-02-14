@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
+import Help from "./pages/help/Help";
 import Search from "./pages/search/Search";
 import Create from "./pages/create/Create";
 
@@ -33,8 +33,8 @@ function App() {
           element: <About />,
         },
         {
-          path: "/contact",
-          element: <Contact />,
+          path: "/help",
+          element: <Help />,
         },
         {
           path: "/search",

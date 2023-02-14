@@ -12,6 +12,7 @@
     rgba(217, 217, 217, 0.3) 100%
   );
   z-index: 999;
+  backdrop-filter: blur(2px);
 
   .left {
     display: flex;
