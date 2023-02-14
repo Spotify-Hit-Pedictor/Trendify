@@ -3,15 +3,22 @@ import "./help.scss";
 const Help = () => {
   return (
     <div className="help">
-      <div className="tutorial">
+      <div className="container">
         <h1>Tutorial</h1>
-        <p></p>
-        <div className="video"></div>
+        <p>Following is an easy implementation of Trendify.</p>
+        <div className="video">WILL BE ADDED SOON</div>
       </div>
-      <div className="contact">
+      <div className="container">
         <h1>Contact us</h1>
-        <div className="mail"></div>
-        <div className="location"></div>
+        <div className="mail">
+          <p>
+            For any help, contributions and developments feel free to mail us
+            <a href="http://mailto@satyabratojha04@gmail.com">
+              satyabratojha04@gmail.com
+            </a>
+          </p>
+        </div>
+        <div className="location">WILL BE ADDED SOON</div>
       </div>
     </div>
   );

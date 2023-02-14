@@ -1,18 +1,40 @@
 .help {
-  .tutorial {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .container {
+    margin-top: 7rem;
+    width: 35%;
+    height: 25rem;
+    background-color: rgba(254, 153, 153, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+    padding: 1rem;
     h1 {
+      color: #ffcece;
     }
     p {
+      padding: 2rem;
+      color: white;
+      font-size: 1rem;
     }
     .video {
-    }
-  }
-  .contact {
-    h1 {
+      color: gray;
+      font-size: 2rem;
     }
     .mail {
+      a {
+        padding: 2rem;
+        color: #ffcece;
+      }
     }
     .location {
+      color: gray;
+      font-size: 2rem;
     }
   }
 }
