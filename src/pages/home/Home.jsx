@@ -13,16 +13,16 @@ const Home = () => {
       </div>
       <div className="bottom">
         <div className="feature left">
-          <p className="first">is the song actually</p>
-          <span>MELODIOUS</span>
-          <button onClick={() => navigate("/search")}>SEARCH</button>
-          <p className="second">Find any existing song's actual power.</p>
-        </div>
-        <div className="feature right">
           <p className="first">Check, Adjust, Tune</p>
           <span>PARAMETERS</span>
           <button onClick={() => navigate("/create")}>CREATE</button>
           <p className="second">Check your song's ability to create a trend.</p>
+        </div>
+        <div className="feature right">
+          <p className="first">is the song actually</p>
+          <span>MELODIOUS</span>
+          <button onClick={() => navigate("/search")}>SEARCH</button>
+          <p className="second">Find any existing song's actual power.</p>
         </div>
       </div>
     </div>

@@ -1,15 +1,11 @@
 import "./navbar.scss";
-import { NavLink } from "react-router-dom";
 import Item from "./Item";
 
 const Navbar = () => {
-  let activeClassName = "active";
-  let inactiveClassName = "inactive";
-
   return (
     <div className="navbar">
       <div className="left">
-        <p className="title">Trendify</p>
+        <p className="title">TRENDIFY</p>
       </div>
       <div className="right">
         <ul>
