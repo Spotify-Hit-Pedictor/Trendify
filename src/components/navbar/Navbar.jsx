@@ -14,19 +14,19 @@ const Navbar = () => {
       <div className="right">
         <ul>
           <li>
-            <Item to="/" name="Home" />
+            <Item to="/" name="HOME" />
           </li>
           <li>
-            <Item to="/create" name="Create" />
+            <Item to="/create" name="CREATE" />
           </li>
           <li>
-            <Item to="/search" name="Search" />
+            <Item to="/search" name="SEARCH" />
           </li>
           <li>
-            <Item to="/about" name="About" />
+            <Item to="/about" name="ABOUT" />
           </li>
           <li>
-            <Item to="/help" name="Help" />
+            <Item to="/help" name="HELP" />
           </li>
         </ul>
       </div>
