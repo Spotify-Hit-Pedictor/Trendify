@@ -22,7 +22,7 @@ const Home = () => {
           <p className="first">Check, Adjust, Tune</p>
           <span>PARAMETERS</span>
           <button onClick={() => navigate("/create")}>CREATE</button>
-          <p className="second">Check you song's ability to create a trend.</p>
+          <p className="second">Check your song's ability to create a trend.</p>
         </div>
       </div>
     </div>
