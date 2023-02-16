@@ -7,11 +7,57 @@
   .container {
     margin-top: 2rem;
     height: 70vh;
-    width: 90vw;
+    width: 75vw;
     background-color: rgba(254, 153, 153, 0.3);
     backdrop-filter: blur(3px);
     border-radius: 10px;
     padding: 1rem;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      color: white;
+    }
+    .allFeatures {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+      gap: 2.75rem;
+      .features {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        .feature {
+          width: 12rem;
+          input {
+            width: 10rem;
+          }
+        }
+      }
+      .numbers {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        input {
+          width: 5rem;
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      width: 12rem;
+      height: 2rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border-radius: 4px;
+      border: none;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: rgba(254, 153, 153, 0.5);
+      }
+    }
   }
 }

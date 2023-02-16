@@ -59,6 +59,10 @@
         letter-spacing: 0.1em;
         border-radius: 4px;
         border: none;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: rgba(254, 153, 153, 0.5);
+        }
       }
     }
   }
