@@ -1,8 +1,18 @@
 import "./search.scss";
-import Analyze from "../../assets/Analyze.png";
-import { height } from "@mui/system";
+import { useState } from "react";
+import BarChartIcon from "@mui/icons-material/BarChart";
 
 const Search = () => {
+  const [search, setSearch] = useState("");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="search">
       <div className="heading">
@@ -10,12 +20,17 @@ const Search = () => {
         <h2>Zero discrimination over advertisements and investments</h2>
       </div>
       <div className="container">
-        <div className="search-box">
-          <input type="text" placeholder="The song in your mind" />
-          <button>
-            <img src={Analyze} alt="analyze" />
+        <form className="search-box">
+          <input
+            type="text"
+            placeholder="The song in your mind"
+            value={search}
+            onChange={handleChange}
+          />
+          <button type="submit" onClick={handleSubmit}>
+            <BarChartIcon className="button" />
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: space-between;
     color: white;
+    gap: 0.4rem;
   }
   .container {
     .search-box {
@@ -35,8 +36,18 @@
       button {
         background-color: transparent;
         border: none;
-        margin-right: 1rem;
+        margin: 0.2rem;
+        cursor: pointer;
+        .button {
+          color: rgba(255, 255, 255, 0.406);
+          font-size: 2rem;
+          padding: 0.2rem;
+        }
       }
+      // button {
+
+      //   margin-right: 1rem;
+      // }
     }
   }
 }
