@@ -32,7 +32,9 @@ Python Libraries: flask, pandas, sklearn, matplotlib, seaborn
 
 Dev Kudawla
 (IIIT Gwalior, 2021 IMG-022)
+
 Himanshu Sharma
 (IIIT Gwalior, 2021 IMG-028)
+
 Satyabrat Ojha
 (IIIT Gwalior, 2021 IMG-054)
