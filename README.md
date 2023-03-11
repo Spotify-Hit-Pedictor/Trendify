@@ -32,7 +32,7 @@ Languages: ReactJS, SCSS, Python
 
 Packages: sass, axios, @mui/material, @mui/icons-material, react, react-DOM, react-routerDOM
 
-Python Libraries: flask, pandas, sklearn, matplotlib, seaborn
+Python Libraries: flask, flask_cors, pickle, xgboost
 
 ## Team Member
 
