@@ -4,15 +4,18 @@
   align-items: center;
   justify-content: space-between;
   .top {
-    margin-top: 6rem;
+    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img {
-      width: 53%;
-      margin-left: 5.75rem;
+      width: 50%;
     }
     h1 {
-      font-size: 5rem;
+      font-size: 6rem;
       color: #fff;
       text-align: center;
+      letter-spacing: 0.1rem;
     }
   }
   .bottom {
@@ -35,7 +38,7 @@
       border-radius: 10px;
       .first {
         font-size: 1.3rem;
-        word-spacing: 0.8em;
+        word-spacing: 0.3em;
         margin-top: auto;
       }
       .second {

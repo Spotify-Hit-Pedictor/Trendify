@@ -1,22 +1,27 @@
 import "./create.scss";
 import { useState } from "react";
+import axios from "axios";
 
 const Create = () => {
+  const [verdict, setVerdict] = useState("HIT");
+
   // features with their initial values
-  const [Danceability, setDanceability] = useState(0.5);
-  const [Energy, setEnergy] = useState(0.6);
-  const [Loudness, setLoudness] = useState(-10);
-  const [Mode, setMode] = useState(1);
-  const [Speechiness, setSpeechiness] = useState(0.08);
-  const [Acousticness, setAcousticness] = useState(0.4);
-  const [Instrumentalness, setInstrumentalness] = useState(0.15);
-  const [Liveness, setLiveness] = useState(0.2);
-  const [Valence, setValence] = useState(0.5);
-  const [Tempo, setTempo] = useState(120);
-  const [Duration, setDuration] = useState(240);
-  const [Time_Signature, setTime_Signature] = useState(4);
-  const [Sections, setSections] = useState(10);
-  const [Decade, setDecade] = useState(2020);
+  const [danceability, setDanceability] = useState(0.58);
+  const [energy, setEnergy] = useState(0.75);
+  const [loudness, setLoudness] = useState(-7);
+  const [mode, setMode] = useState(0);
+  const [speechiness, setSpeechiness] = useState(0.03);
+  const [acousticness, setAcousticness] = useState(0.6);
+  const [instrumentalness, setInstrumentalness] = useState(0.01);
+  const [liveness, setLiveness] = useState(0.18);
+  const [valence, setValence] = useState(0.26);
+  const [tempo, setTempo] = useState(131);
+  const [duration_ms, setDurationMs] = useState(308000);
+  const [duration, setDuration] = useState(308);
+  const [time_signature, setTime_Signature] = useState(4);
+  const [sections, setSections] = useState(13);
+  const [decade, setDecade] = useState(2000);
+  const [odecade, setOdecade] = useState(2000);
 
   const changeDanceability = (event) => {
     setDanceability(parseFloat(event.target.value));
@@ -50,6 +55,7 @@ const Create = () => {
   };
   const changeDuration = (event) => {
     setDuration(parseFloat(event.target.value));
+    setDurationMs(parseFloat(event.target.value) * 1000);
   };
   const changeTime_Signature = (event) => {
     setTime_Signature(parseInt(event.target.value));
@@ -57,29 +63,40 @@ const Create = () => {
   const changeSections = (event) => {
     setSections(parseInt(event.target.value));
   };
-  const changeDecade = (event) => {
+  const changeOdecade = (event) => {
+    setOdecade(parseInt(event.target.value));
     setDecade(parseInt(event.target.value));
+    if (decade === 2020) setDecade(2010);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
     const data = {
-      Danceability,
-      Energy,
-      Loudness,
-      Mode,
-      Speechiness,
-      Acousticness,
-      Instrumentalness,
-      Liveness,
-      Valence,
-      Tempo,
-      Duration,
-      Time_Signature,
-      Sections,
-      Decade,
+      danceability,
+      energy,
+      loudness,
+      mode,
+      speechiness,
+      acousticness,
+      instrumentalness,
+      liveness,
+      valence,
+      tempo,
+      duration_ms,
+      time_signature,
+      sections,
+      decade,
     };
-    console.log(data);
+
+    try {
+      const response = await axios.post("http://localhost:5000/predict", data);
+      console.log(response.data.verdict);
+      if (response.data.verdict === "Hit") setVerdict("HIT");
+      else setVerdict("FLOP");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -89,154 +106,159 @@ const Create = () => {
         <div className="allFeatures">
           <div className="features">
             <div className="feature">
-              <p>Danceability : {Danceability}</p>
+              <p>Danceability : {danceability}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
-                step={0.1}
-                value={Danceability}
+                step={0.01}
+                value={danceability}
                 onChange={changeDanceability}
               />
             </div>
             <div className="feature">
-              <p>Energy : {Energy}</p>
+              <p>Energy : {energy}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
-                step={0.1}
-                value={Energy}
+                step={0.01}
+                value={energy}
                 onChange={changeEnergy}
               />
             </div>
             <div className="feature">
-              <p>Loudness : {Loudness}</p>
+              <p>Loudness : {loudness}</p>
               <input
                 type="range"
                 min={-60}
                 max={4}
                 step={1}
-                value={Loudness}
+                value={loudness}
                 onChange={changeLoudness}
               />
             </div>
             <div className="feature">
-              <p>Mode : {Mode}</p>
+              <p>Mode : {mode}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
                 step={1}
-                value={Mode}
+                value={mode}
                 onChange={changeMode}
               />
             </div>
           </div>
           <div className="features">
             <div className="feature">
-              <p>Speechiness : {Speechiness}</p>
+              <p>Speechiness : {speechiness}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
-                step={0.02}
-                value={Speechiness}
+                step={0.01}
+                value={speechiness}
                 onChange={changeSpeechiness}
               />
             </div>
             <div className="feature">
-              <p>Acousticness : {Acousticness}</p>
+              <p>Acousticness : {acousticness}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
-                step={0.1}
-                value={Acousticness}
+                step={0.01}
+                value={acousticness}
                 onChange={changeAcousticness}
               />
             </div>
             <div className="feature">
-              <p>Instrumentalness : {Instrumentalness}</p>
+              <p>Instrumentalness : {instrumentalness}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
-                step={0.05}
-                value={Instrumentalness}
+                step={0.01}
+                value={instrumentalness}
                 onChange={changeInstrumentalness}
               />
             </div>
             <div className="feature">
-              <p>Liveness : {Liveness}</p>
+              <p>Liveness : {liveness}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
-                step={0.1}
-                value={Liveness}
+                step={0.01}
+                value={liveness}
                 onChange={changeLiveness}
               />
             </div>
           </div>
           <div className="features">
             <div className="feature">
-              <p>Valence : {Valence}</p>
+              <p>Valence : {valence}</p>
               <input
                 type="range"
                 min={0}
                 max={1}
-                step={0.1}
-                value={Valence}
+                step={0.01}
+                value={valence}
                 onChange={changeValence}
               />
             </div>
             <div className="feature">
-              <p>Tempo : {Tempo}</p>
+              <p>Tempo : {tempo}</p>
               <input
                 type="range"
                 min={0}
                 max={250}
                 step={1}
-                value={Tempo}
+                value={tempo}
                 onChange={changeTempo}
               />
             </div>
             <div className="feature">
-              <p>Time_Signature : {Time_Signature}</p>
+              <p>Time_Signature : {time_signature}</p>
               <input
                 type="range"
                 min={0}
                 max={5}
                 step={1}
-                value={Time_Signature}
+                value={time_signature}
                 onChange={changeTime_Signature}
               />
             </div>
             <div className="feature">
-              <p>Decade : {Decade}</p>
+              <p>Decade : {odecade}</p>
               <input
                 type="range"
                 min={1960}
                 max={2020}
                 step={10}
-                value={Decade}
-                onChange={changeDecade}
+                value={odecade}
+                onChange={changeOdecade}
               />
             </div>
           </div>
           <div className="numbers">
             <div className="feature">
               <p>Duration</p>
-              <input type="number" value={Duration} onChange={changeDuration} />
+              <input type="number" value={duration} onChange={changeDuration} />
             </div>
             <div className="feature">
               <p>Sections</p>
-              <input type="number" value={Sections} onChange={changeSections} />
+              <input type="number" value={sections} onChange={changeSections} />
             </div>
           </div>
         </div>
-        <button onClick={handleSubmit}>SUBMIT</button>
+        <div className="submit">
+          <button onClick={handleSubmit}>SUBMIT</button>
+          <p>
+            verdict: <span className={verdict}>{verdict}</span>
+          </p>
+        </div>
       </div>
     </div>
   );
