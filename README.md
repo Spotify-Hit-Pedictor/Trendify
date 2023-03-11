@@ -11,9 +11,15 @@ Fork the repository and clone it.
 
 Open the project directory over terminal and run `npm i`.
 
-Over the terminal run `npm start`.
+Over the terminal run `python app.py`.
 
-Create another terminal and run `python app.py`.
+Create another terminal and run `npm start`.
+
+It runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
+
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
 ## Features Implemented
 
