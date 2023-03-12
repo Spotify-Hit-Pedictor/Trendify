@@ -5,17 +5,56 @@
   align-items: center;
   justify-content: center;
   .project {
-    background-color: white;
-    color: black;
-    width: 70vw;
-    margin-top: 6rem;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding: 1.5rem;
+    color: white;
+    background-color: rgba(254, 153, 153, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    font-size: large;
+  }
+  h2 {
+    margin-top: 5vh;
+    font-size: 1.5rem;
   }
   .creators {
-    span {
-    }
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
     .creator {
+      padding: 1rem;
+      color: white;
+      background-color: rgba(254, 153, 153, 0.3);
+      backdrop-filter: blur(3px);
+      border-radius: 10px;
+      width: 14vw;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      // justify-content: space-between;
+      gap: 1rem;
+      span {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .socials {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        a {
+          font-size: 0.9rem;
+          color: #ffcece;
+        }
+      }
     }
   }
 }

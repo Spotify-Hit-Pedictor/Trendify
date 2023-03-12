@@ -4,7 +4,7 @@
   justify-content: space-around;
   .container {
     margin-top: 7rem;
-    width: 35%;
+    width: 35vw;
     height: 25rem;
     background-color: rgba(254, 153, 153, 0.3);
     backdrop-filter: blur(3px);
@@ -32,9 +32,9 @@
         color: #ffcece;
       }
     }
-    .location {
-      color: gray;
-      font-size: 2rem;
-    }
+    // .location {
+    //   color: gray;
+    //   font-size: 2rem;
+    // }
   }
 }

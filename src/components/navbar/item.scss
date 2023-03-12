@@ -1,10 +1,13 @@
 .active {
   color: #ffcece;
   text-decoration: none;
-  padding: 0 0 2px 0;
-  border-bottom: 3px #ffcece solid;
+  padding: 0.2rem;
 }
 .inactive {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
+  padding: 0.2rem;
+}
+.inactive:hover {
+  border-bottom: 2px #a1a1a1 solid;
 }

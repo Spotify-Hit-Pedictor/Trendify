@@ -32,6 +32,7 @@ const Search = () => {
           </button>
         </form>
       </div>
+      <p>Under Development</p>
     </div>
   );
 };

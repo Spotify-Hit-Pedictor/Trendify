@@ -12,11 +12,34 @@ const About = () => {
         we will train our classification model using the Billboard Hot 100 as a
         benchmark.
       </div>
+      <h2>Created by -</h2>
       <div className="creators">
-        <span>Created by -</span>
-        <div className="creator">Satyabrat Ojha</div>
-        <div className="creator">Dev Kudawla</div>
-        <div className="creator">Himanshu Sharma</div>
+        <div className="creator">
+          <span>Satyabrat Ojha</span>
+          <p>Specialist @Codeforces, MERN Stack developer, ML Engineer</p>
+          <div className="socials">
+            <a href="https://www.linkedin.com/in/satyabratojha/">linkedin</a>
+            <a href="https://github.com/Satyabrat-Ojha">github</a>
+          </div>
+        </div>
+        <div className="creator">
+          <span>Dev Kudawla</span>
+          <p>Competitive programmer, Android/Web developer, ML Engineer</p>
+          <div className="socials">
+            <a href="#">linkedin</a>
+            <a href="https://github.com/devkudawla">github</a>
+          </div>
+        </div>
+        <div className="creator">
+          <span>Himanshu Sharma</span>
+          <p>Specialist @Codeforces, 4-star @Codechef, ML Engineer</p>
+          <div className="socials">
+            <a href="https://www.linkedin.com/in/himanshu-sharma-0130b2253/">
+              linkedin
+            </a>
+            <a href="https://github.com/Himanshu-0502">github</a>
+          </div>
+        </div>
       </div>
     </div>
   );
