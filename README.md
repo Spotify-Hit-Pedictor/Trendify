@@ -3,6 +3,12 @@
 A powerful machine learning driven website to predict a song's TRUE popularity on the basis of song's characteristics, ignoring its advertisements and investments.
 Its based over a machine learning model (link) developed by us.
 
+## Screenshot
+![WhatsApp Image 2023-03-12 at 23 23 40](https://user-images.githubusercontent.com/115351696/224563341-71f7bce0-f75e-4f30-a9f4-45a318c6de8d.jpg)
+![WhatsApp Image 2023-03-12 at 23 23 51](https://user-images.githubusercontent.com/115351696/224563378-c5eef2b0-a241-438c-8ded-01f3a49943d0.jpg)
+![WhatsApp Image 2023-03-12 at 23 24 26](https://user-images.githubusercontent.com/115351696/224563387-1fe8e860-41db-4c63-96c5-b36e34de9452.jpg)
+![WhatsApp Image 2023-03-12 at 23 24 27](https://user-images.githubusercontent.com/115351696/224563401-a90fce89-4cad-477c-8586-a883a636eaca.jpg)
+![WhatsApp Image 2023-03-12 at 23 25 45](https://user-images.githubusercontent.com/115351696/224563416-e4c56fc4-3e85-4fd1-b6bc-72ba5cd712ab.jpg)
 ## Local Setup
 
 Either download a [Zip file](https://github.com/Spotify-Hit-Pedictor/Trendify/archive/refs/heads/main.zip)
@@ -72,3 +78,4 @@ Satyabrat Ojha
 - time_signature: An estimated overall time signature of a track. The time signature (meter) is a notational convention to specify how many beats are in each bar (or measure).
 
 - sections: The number of sections the particular track has. This feature was extracted from the data recieved by the API call for Audio Analysis of that particular track.
+
