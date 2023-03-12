@@ -91,11 +91,10 @@ const Create = () => {
 
     try {
       const response = await axios.post("http://localhost:5000/predict", data);
-      console.log(response.data.verdict);
       if (response.data.verdict === "Hit") setVerdict("HIT");
       else setVerdict("FLOP");
     } catch (err) {
-      console.log(err);
+      prompt(err);
     }
   };
 

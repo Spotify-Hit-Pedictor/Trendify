@@ -5,6 +5,15 @@ const Help = () => {
     <div className="help">
       <div className="container">
         <h1>Tutorial</h1>
+        <div className="docs">
+          <span>
+            Docs:
+            <a href="https://www.youtube.com/watch?v=QX4d2uG4SRI">
+              Website
+            </a>,{" "}
+            <a href="https://www.youtube.com/watch?v=QX4d2uG4SRI">ML model</a>
+          </span>
+        </div>
         <p>Following is an easy implementation of Trendify.</p>
         <div className="video">WILL BE ADDED SOON</div>
       </div>

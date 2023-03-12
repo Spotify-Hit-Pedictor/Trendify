@@ -7,8 +7,9 @@
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   padding: 0.2rem;
-}
-.inactive:hover {
-  color: rgba(255, 255, 255, 0.75);
-  border-bottom: 2px rgba(255, 255, 255, 0.75) solid;
+  transition: all 0.2s ease;
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+    border-bottom: 2px rgba(255, 255, 255, 0.75) solid;
+  }
 }
