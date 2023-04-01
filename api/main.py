@@ -6,7 +6,7 @@ import xgboost as xgb
 app = Flask("__name__")
 CORS(app)
 
-with open("final_model.bin", "rb") as f_in:
+with open("api/final_model.bin", "rb") as f_in:
     (dv, model) = pickle.load(f_in)
 
 @app.route("/", methods=["GET"])
