@@ -11,6 +11,8 @@ Its based over a machine learning model (link) developed by us.
 ![WhatsApp Image 2023-03-12 at 23 25 45](https://user-images.githubusercontent.com/115351696/224563416-e4c56fc4-3e85-4fd1-b6bc-72ba5cd712ab.jpg)
 ## Local Setup
 
+CURRENTLY UNAVAILABLE !!!
+
 Either download a [Zip file](https://github.com/Spotify-Hit-Pedictor/Trendify/archive/refs/heads/main.zip)
 OR
 Fork the repository and clone it.
